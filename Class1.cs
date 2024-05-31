@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
+using System.Data.SqlClient;
 namespace WindowsFormsApp1
 {
     public class Person
@@ -151,7 +152,7 @@ namespace WindowsFormsApp1
             }
         }
 
-            public string Cell
+        public string Cell
         {
             get
             {
@@ -162,7 +163,77 @@ namespace WindowsFormsApp1
                 CellPhone = value;
             }
 
-        } } }
+        }
+
+        public string AddARecord()
+        {
+            Console.WriteLine("Help me step 1");
+            //Init string var
+            string strResult = "";
+
+            //Make a connection object
+            SqlConnection Conn = new SqlConnection();
+
+            //Initialize it's properties
+            Conn.ConnectionString = @"Server=sql.neit.edu\sqlstudentserver,4500;Database=Dev_202430_ACzerwonka;User Id=Dev_202430_ACzerwonka;Password=008022318;";     //Set the Who/What/Where of DB
+            Console.WriteLine("Help me step 2");
+
+            //*******************************************************************************************************
+            // NEW
+            //*******************************************************************************************************
+            string strSQL = "INSERT INTO Workers (FName, MName, LName, Street1, Street2, City, State, Zip, Phone, Email, InstagramURL, CellPhone) VALUES (@FName, @MName, @LName, @Street1, @Street2, @City, @State, @Zip, @Phone, @Email, @InstagramURL, @CellPhone)";
+            // Bark out our command
+            SqlCommand comm = new SqlCommand();
+            comm.CommandText = strSQL;  //Commander knows what to say
+            comm.Connection = Conn;     //Where's the phone?  Here it is
+            Console.WriteLine("Help me step 3");
+            //Fill in the paramters (Has to be created in same sequence as they are used in SQL Statement)
+            comm.Parameters.AddWithValue("@FName", FirstName);
+            comm.Parameters.AddWithValue("@MName", MidName);
+            comm.Parameters.AddWithValue("@LName", LastName);
+            comm.Parameters.AddWithValue("@Street1", StreetOne);
+            comm.Parameters.AddWithValue("@Street2", StreetTwo);
+            comm.Parameters.AddWithValue("@City", PubCity);
+            comm.Parameters.AddWithValue("@State", PubState);
+            comm.Parameters.AddWithValue("@Zip", ZipCode);
+            comm.Parameters.AddWithValue("@Phone", PhoneNum);
+            comm.Parameters.AddWithValue("@Email", UserEmail);
+            comm.Parameters.AddWithValue("@InstagramURL", Instagram);
+            comm.Parameters.AddWithValue("@CellPhone", Cell);
+            Console.WriteLine("Help me step 5");
+
+            //*******************************************************************************************************
+
+
+
+
+
+            //attempt to connect to the server
+            try
+            {
+                Conn.Open();
+                Console.WriteLine("Help me step 6.1");
+                int intRecs = comm.ExecuteNonQuery();
+                Console.WriteLine("Help me step 6.2");
+                strResult = $"SUCCESS: Inserted {intRecs} records.";
+                Conn.Close();
+                Console.WriteLine("Help me step 6");
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("Help me step 7");
+                strResult = "ERROR: " + err.Message;
+            }
+            finally
+            {
+
+            }
+            //Return resulting feedback string
+            return strResult;
+        }
+    }
+
+}
 
 
 

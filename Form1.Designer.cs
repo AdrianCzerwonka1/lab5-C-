@@ -163,6 +163,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 11;
+            this.textBox1.Text = "Adrian";
             // 
             // textBox2
             // 
@@ -170,6 +171,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 12;
+            this.textBox2.Text = "Jan";
             // 
             // textBox3
             // 
@@ -177,6 +179,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 13;
+            this.textBox3.Text = "Czerwonka";
             // 
             // textBox4
             // 
@@ -184,6 +187,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 14;
+            this.textBox4.Text = "13 Okaton";
             // 
             // textBox5
             // 
@@ -191,6 +195,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 15;
+            this.textBox5.Text = "21 okat";
             // 
             // textBox6
             // 
@@ -198,6 +203,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 16;
+            this.textBox6.Text = "Woony";
             // 
             // textBox7
             // 
@@ -205,6 +211,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 17;
+            this.textBox7.Text = "RI";
             // 
             // textBox8
             // 
@@ -212,6 +219,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 18;
+            this.textBox8.Text = "02895";
             // 
             // textBox9
             // 
@@ -219,6 +227,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 20);
             this.textBox9.TabIndex = 19;
+            this.textBox9.Text = "4019231234";
             // 
             // textBox10
             // 
@@ -226,6 +235,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 20);
             this.textBox10.TabIndex = 20;
+            this.textBox10.Text = "Iji@gmail.com";
             // 
             // button1
             // 
@@ -261,6 +271,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 20);
             this.textBox11.TabIndex = 24;
+            this.textBox11.Text = "Insta@.com";
             // 
             // textBox12
             // 
@@ -268,6 +279,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(100, 20);
             this.textBox12.TabIndex = 25;
+            this.textBox12.Text = "3012323412";
             // 
             // Form1
             // 

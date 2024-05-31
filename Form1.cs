@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,9 +49,13 @@ namespace WindowsFormsApp1
             employee.UserEmail = textBox10.Text;
             employee.UserInsta = textBox11.Text;
             employee.Cell = textBox12.Text;
+            employee.AddARecord();
 
-            label11.Text = "Employee Name " + employee.FirstName + " " + employee.MidName + " " + employee.LastName + " . The Employee Address is " + employee.StreetOne + " " + employee.StreetTwo + " " + employee.PubCity + "  " + employee.PubState + " " + employee.ZipCode + " . Personal Employee info. " + employee.PhoneNum + " " + employee.UserEmail + " Users Instagram " + employee.UserInsta + " Secondary Cell " + employee.Cell;
-        }
+
+           
+           
+            
+           }
 
         private void Form1_Load(object sender, EventArgs e)
         {
